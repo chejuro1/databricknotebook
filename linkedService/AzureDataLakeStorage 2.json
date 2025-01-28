@@ -1,0 +1,10 @@
+{
+	"name": "AzureDataLakeStorage 2",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://testchejuro1.dfs.core.windows.net/"
+		}
+	}
+}
