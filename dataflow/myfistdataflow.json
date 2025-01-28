@@ -13,7 +13,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "dataset2",
+						"referenceName": "dataset3",
 						"type": "DatasetReference"
 					},
 					"name": "source2"
@@ -38,15 +38,14 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source(output(",
 				"          id as string,",
-				"          name as string,",
-				"          firstname as string,",
-				"          {age } as string,",
-				"          amount as string",
+				"          location as string,",
+				"          address as string,",
+				"          phone as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source2",
-				"source1, source2 join(source1@id == source2@id,",
+				"source1 join(source1@id == source2@id,",
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
