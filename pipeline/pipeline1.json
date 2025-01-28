@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "Data flow2",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -15,10 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "myfistdataflow",
-						"type": "DataFlowReference"
-					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
