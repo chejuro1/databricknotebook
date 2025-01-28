@@ -34,9 +34,6 @@
 			"transformations": [
 				{
 					"name": "join1"
-				},
-				{
-					"name": "join2"
 				}
 			],
 			"scriptLines": [
@@ -66,10 +63,6 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"source3 join(joinType:'inner',",
-				"     matchType:'exact',",
-				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> join2",
 				"join1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
