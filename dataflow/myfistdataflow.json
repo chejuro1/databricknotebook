@@ -10,29 +10,10 @@
 						"type": "DatasetReference"
 					},
 					"name": "source1"
-				},
-				{
-					"dataset": {
-						"referenceName": "dataset3",
-						"type": "DatasetReference"
-					},
-					"name": "source2"
 				}
 			],
-			"sinks": [
-				{
-					"dataset": {
-						"referenceName": "sink1",
-						"type": "DatasetReference"
-					},
-					"name": "sink1"
-				}
-			],
-			"transformations": [
-				{
-					"name": "join1"
-				}
-			],
+			"sinks": [],
+			"transformations": [],
 			"scriptLines": [
 				"source(output(",
 				"          id as string,",
@@ -43,31 +24,7 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source(output(",
-				"          id as string,",
-				"          location as string,",
-				"          address as string,",
-				"          phone as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source2",
-				"source1, source2 join(source1@id == source2@id,",
-				"     joinType:'left',",
-				"     matchType:'exact',",
-				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> join1",
-				"join1 sink(allowSchemaDrift: true,",
-				"     validateSchema: true,",
-				"     input(",
-				"          id as string,",
-				"          location as string,",
-				"          address as string,",
-				"          phone as string",
-				"     ),",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     ignoreNoFilesFound: false) ~> source1"
 			]
 		}
 	}
