@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "testchejuro"
+		},
+		"AzureDataLakeStorage 2_properties_typeProperties_url": {
+			"value": "https://testchejuro1.dfs.core.windows.net/"
+		},
+		"CosmosDbNoSql1_properties_typeProperties_accountEndpoint": {
+			"value": "https://testchejuro.documents.azure.com:443/"
+		},
+		"CosmosDbNoSql1_properties_typeProperties_database": {
+			"value": "test"
+		},
+		"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
+			"value": "https://testchejuro1.blob.core.windows.net/"
+		}
+	}
+}
